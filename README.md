@@ -40,5 +40,7 @@ bin/rails s
 ```
 bundle exec rails new scaffold_app -d postgresql
 bin/rails db:create
+bin/rails generate scaffold user name:string address:string age:integer
+bin/rails db:migrate
 
 ```
