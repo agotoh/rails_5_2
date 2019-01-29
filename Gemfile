@@ -6,9 +6,3 @@ git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 
 gem 'rails', '5.2.1'
 
-group :development, :test do
-  gem 'pry-rails'
-  gem 'pry-doc'
-  gem 'pry-byebug'
-  gem 'pry-stack_explorer'
-end

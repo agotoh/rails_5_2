@@ -38,9 +38,18 @@ bin/rails s
 ## rails コマンド
 
 ```
-bundle exec rails new scaffold_app -d postgresql
+bundle exec rails new taskleaf -d postgresql
 bin/rails db:create
 bin/rails generate scaffold user name:string address:string age:integer
 bin/rails db:migrate
 
 ```
+
+bundle exec rails new scaffold_app -d postgresql
+
+group :development, :test do
+gem 'pry-rails'
+gem 'pry-doc'
+gem 'pry-byebug'
+gem 'pry-stack_explorer'
+end
