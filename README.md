@@ -56,7 +56,7 @@ gem 'html2slim'
 
 erb ファイルを slim に変換
 
-````zsh
+```zsh
 bundle exec erb2slim app/views/layouts/ --delete
 ```
 
@@ -71,4 +71,4 @@ gem 'pry-doc'
 gem 'pry-byebug'
 gem 'pry-stack_explorer'
 end
-````
+```
