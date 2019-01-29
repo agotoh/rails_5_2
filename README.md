@@ -72,3 +72,17 @@ group :development, :test do
   gem 'pry-stack_explorer'
 end
 ```
+
+## Rails のエラーメッセージ等を日本語で出せるようにする
+
+[GitHub の rails-i18n リポジトリ](https://github.com/svenfuchs/rails-i18n/) から、raw ファイルを config/locales.ja.yml としてダウンロード
+
+```zsh
+curl -s https://raw.githubusercontent.com/svenfuchs/rails-i18n/master/rails/locale/ja.yml -o config/locales/ja.yml
+```
+
+config/initializers/locale.rb を作成し、以下行を追加
+
+```ruby:loale.rb
+Rails.application.config.i18n.default_locale = :ja
+```
