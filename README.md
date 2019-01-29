@@ -31,17 +31,34 @@ psql postgres
 # development login
 psql scaffold_app_development
 
-# rails s
-bin/rails s
 ```
 
 ## rails コマンド
 
 ```
+# dbにpostgreを使ってアプリケーション作成
 bundle exec rails new taskleaf -d postgresql
+# db作成
 bin/rails db:create
+# scaffold
 bin/rails generate scaffold user name:string address:string age:integer
+
+# migrate
 bin/rails db:migrate
+# migrateのステータス確認
+bin/rails db:migrate:status
+# migrateのロールバック(直近1つ)
+bin/rails db:rollback
+# migrateのロールバック(直近3つ)
+bin/rails db:rollback STEP=3
+# migrateロールバック＆再マイグレーション
+bin/rails db:rollback:redo STEP=3
+
+# puma 起動
+bin/rails s
+
+# モデル作成
+bin/rails g model [model名][属性名:データ型 属性名:データ型…][オプション]
 
 ```
 
@@ -85,4 +102,11 @@ config/initializers/locale.rb を作成し、以下行を追加
 
 ```ruby:loale.rb
 Rails.application.config.i18n.default_locale = :ja
+```
+
+## chapter3 タスク管理アプリケーションの作成
+
+```zsh:
+bin/rails g model Task name:string
+bin/rails g controller tasks index show new edit
 ```
