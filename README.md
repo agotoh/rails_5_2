@@ -45,11 +45,30 @@ bin/rails db:migrate
 
 ```
 
-bundle exec rails new scaffold_app -d postgresql
+## slim の導入
 
+Gemfile に以下追加して bundle install
+
+```yaml:Gemfile
+gem 'slim-rails'
+gem 'html2slim'
+```
+
+erb ファイルを slim に変換
+
+````zsh
+bundle exec erb2slim app/views/layouts/ --delete
+```
+
+## pry-rails の導入
+
+Gemfile
+
+```yaml:Gemfile
 group :development, :test do
 gem 'pry-rails'
 gem 'pry-doc'
 gem 'pry-byebug'
 gem 'pry-stack_explorer'
 end
+````
