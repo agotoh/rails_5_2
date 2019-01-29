@@ -59,7 +59,8 @@ bin/rails s
 
 # モデル作成
 bin/rails g model [model名][属性名:データ型 属性名:データ型…][オプション]
-
+# コントローラ作成
+bin/rails g controller [コントローラ名] []
 ```
 
 ## slim の導入
