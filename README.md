@@ -57,10 +57,13 @@ bin/rails db:rollback:redo STEP=3
 # puma 起動
 bin/rails s
 
+# routes確認
+bin/rails routes
+
 # モデル作成
 bin/rails g model [model名][属性名:データ型 属性名:データ型…][オプション]
 # コントローラ作成
-bin/rails g controller [コントローラ名] []
+bin/rails g controller [コントローラ名] [アクション名 アクション名 …][オプション]
 ```
 
 ## slim の導入
