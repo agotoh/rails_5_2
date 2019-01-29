@@ -111,6 +111,6 @@ Rails.application.config.i18n.default_locale = :ja
 ## chapter3 タスク管理アプリケーションの作成
 
 ```zsh:
-bin/rails g model Task name:string
+bin/rails g model Task name:string description:text
 bin/rails g controller tasks index show new edit
 ```
