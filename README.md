@@ -52,7 +52,7 @@ bin/rails db:rollback
 # migrateのロールバック(直近3つ)
 bin/rails db:rollback STEP=3
 # migrateロールバック＆再マイグレーション
-bin/rails db:rollback:redo STEP=3
+bin/rails db:migrate:redo STEP=3
 
 # puma 起動
 bin/rails s
