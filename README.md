@@ -49,7 +49,7 @@ bin/rails db:migrate
 
 Gemfile に以下追加して bundle install
 
-```yaml:Gemfile
+```ruby:Gemfile
 gem 'slim-rails'
 gem 'html2slim'
 ```
@@ -64,11 +64,11 @@ bundle exec erb2slim app/views/layouts/ --delete
 
 Gemfile
 
-```yaml:Gemfile
+```ruby:Gemfile
 group :development, :test do
-gem 'pry-rails'
-gem 'pry-doc'
-gem 'pry-byebug'
-gem 'pry-stack_explorer'
+  gem 'pry-rails'
+  gem 'pry-doc'
+  gem 'pry-byebug'
+  gem 'pry-stack_explorer'
 end
 ```
